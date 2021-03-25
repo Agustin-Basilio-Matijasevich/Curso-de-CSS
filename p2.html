@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="es-ar">
+<head>
+
+    <meta charset="utf-8" />
+    <title>Clase de especificidad, herencia y cascada</title>
+
+    <link href="/favicon.svg" rel="shortcut icon" />
+    <link href="/styles2-dist.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <header>
+        <a href="/">
+            <img src="/back.svg" alt="Volver a inicio" style="
+    width: 200px; height: 200px;
+    " />
+        </a>
+    </header>
+
+    <h1>Clase de especificidad, herencia y cascada</h1>
+
+    <p>Estamos viendo la <a href="#">herencia</a> en CSS</p>
+
+    <p class="parrafo">Estamos viendo la <a href="#">cascada</a> en CSS</p>
+
+    <p id="parrafo" style="color: aqua">Estamos viendo la <a href="#">cascada</a> en CSS</p> <!--A su vez los estilos en linea tienen aun mas especificidad, valor 1000 y por tanto gana al id-->
+
+    <p class="parrafo-2">Un parrafo mas</p>
+
+</body>
+</html>

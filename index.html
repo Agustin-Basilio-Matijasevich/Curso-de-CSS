@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html lang="es-ar">
+<head>
+
+    <meta charset="utf-8" />
+    <title>Probando CSS</title>
+    
+    <link href="/favicon.svg" rel="shortcut icon" />
+    <link href="/styles1-dist.css" rel="stylesheet" /> <!--Vamos a usar este metodo-->
+
+    <!-- Insertar css en la cabecera, no recomendable salvo que tengamos una sola pagina o para pruebas
+    <style>
+        p{
+            color: red;
+        }
+    </style>
+    -->
+
+    <!--<link href="/styles1-dist.css" rel="stylesheet" />  Trayendo una hoja de estilos externa, la forma mas recomendada-->
+
+    <!--  Importando con la regla @import url(), no se recomienda para evitar posibles fallos
+        <style>
+        @import url("/styles1-dist.css");
+    </style>
+        -->
+
+</head>
+<body>
+
+    <header>
+        <a href="/">
+            <img src="/back.svg" alt="Volver a inicio" style="
+    width: 200px; height: 200px;
+    "/>
+        </a>
+    </header>
+
+    <!--<h1 style="color: blue">Soy el titulo principal</h1>  Estilo en linea, no recomendado para estilos estaticos solo para estilos que se tienen que calcular en tiempo real con javascript-->
+
+    <h1>Selectores</h1>
+
+    <p>
+        Juan Bautista Alberdi nació en San Miguel de Tucumán, el 29 de agosto de 1810.
+        Su padre, Salvador Cayetano de Alberdi Egaña, era un comerciante vasco, nacido el 7 de julio de 1757 en Guetaria, Guipúzcoa, hijo de Manuel Ventura de Alberdi Elcano y Magdalena de Egaña Larzabal.
+        Fue dueño de una importante pulpería, que había dirigido una de las cuatro compañías que organizó José Ignacio Garmendia y Alurralde para la defensa de Buenos Aires en las Invasiones Inglesas.
+        Su madre, Josefa Aráoz y Balderrama, era una criolla que falleció a causa del parto de Alberdi, y quien además era miembro de una de las más importantes familias tucumanas.
+
+        Su familia apoyó la Revolución de Mayo desde sus inicios y su padre frecuentaba al general Manuel Belgrano cuando este estaba al mando del Ejército del Norte.
+        Salvador Cayetano Alberdi Egaña falleció en 1822, por lo que Alberdi, con tan solo 11 años quedó al cuidado de sus hermanos mayores.
+    </p>
+
+    <h1 class="title">Soy el titulo principal</h1>
+
+    <p class="text">
+        Juan Bautista Alberdi nació en San Miguel de Tucumán, el 29 de agosto de 1810.
+        Su padre, Salvador Cayetano de Alberdi Egaña, era un comerciante vasco, nacido el 7 de julio de 1757 en Guetaria, Guipúzcoa, hijo de Manuel Ventura de Alberdi Elcano y Magdalena de Egaña Larzabal.
+        Fue dueño de una importante pulpería, que había dirigido una de las cuatro compañías que organizó José Ignacio Garmendia y Alurralde para la defensa de Buenos Aires en las Invasiones Inglesas.
+        Su madre, Josefa Aráoz y Balderrama, era una criolla que falleció a causa del parto de Alberdi, y quien además era miembro de una de las más importantes familias tucumanas.
+
+        Su familia apoyó la Revolución de Mayo desde sus inicios y su padre frecuentaba al general Manuel Belgrano cuando este estaba al mando del Ejército del Norte.
+        Salvador Cayetano Alberdi Egaña falleció en 1822, por lo que Alberdi, con tan solo 11 años quedó al cuidado de sus hermanos mayores.
+    </p>
+
+    <h1 id="title">Soy el titulo principal</h1>
+
+    <p id="text">
+        Juan Bautista Alberdi nació en San Miguel de Tucumán, el 29 de agosto de 1810.
+        Su padre, Salvador Cayetano de Alberdi Egaña, era un comerciante vasco, nacido el 7 de julio de 1757 en Guetaria, Guipúzcoa, hijo de Manuel Ventura de Alberdi Elcano y Magdalena de Egaña Larzabal.
+        Fue dueño de una importante pulpería, que había dirigido una de las cuatro compañías que organizó José Ignacio Garmendia y Alurralde para la defensa de Buenos Aires en las Invasiones Inglesas.
+        Su madre, Josefa Aráoz y Balderrama, era una criolla que falleció a causa del parto de Alberdi, y quien además era miembro de una de las más importantes familias tucumanas.
+
+        Su familia apoyó la Revolución de Mayo desde sus inicios y su padre frecuentaba al general Manuel Belgrano cuando este estaba al mando del Ejército del Norte.
+        Salvador Cayetano Alberdi Egaña falleció en 1822, por lo que Alberdi, con tan solo 11 años quedó al cuidado de sus hermanos mayores.
+    </p>
+
+    <a class="rojo- verde" href="">Enlace 1 rojo verde</a>
+    <a class="rojo" href="">Enlace 2 rojo</a>
+    <a class="verde" href="#">Enlace 3 verde</a>
+    <a class="verde rojo" href="#">Enlace 4 verde rojo</a>
+
+    <h1>Titulo</h1>
+    <h2>Subtitulo</h2>
+    <h2>Otro subtitulo</h2>
+    <h3>Otro subtitulo mas</h3>
+    <div>
+        <p>
+            Juan Bautista Alberdi nació en San Miguel de Tucumán, el 29 de agosto de 1810.
+            Su padre, Salvador Cayetano de Alberdi Egaña, era un comerciante vasco, nacido el 7 de julio de 1757 en Guetaria, Guipúzcoa, hijo de Manuel Ventura de Alberdi Elcano y Magdalena de Egaña Larzabal.
+            Fue dueño de una importante pulpería, <span>SOY UN SPAN</span> que había dirigido una de las cuatro compañías que organizó José Ignacio Garmendia y Alurralde para la defensa de Buenos Aires en las Invasiones Inglesas.
+            Su madre, Josefa Aráoz y Balderrama, era una criolla que falleció a causa del
+        </p>
+        <span>Otro span</span>
+    </div>
+
+    <hr />
+
+    <h2>Links</h2>
+
+    <nav>
+        <ol>
+
+            <li>
+                <a href="/p2.html" class="link">Ir a clase de especificidad y herencia</a>
+                <pre></pre>
+            </li>
+
+            <li>
+                <a href="/p3.html" class="link">Ir a clase de resetear estilos de los navegadores</a>
+                <pre></pre>
+            </li>
+
+            <li>
+                <a href="/p4.html" class="link">Ir a clase de metodologia BEM</a>
+                <pre></pre>
+            </li>
+
+        </ol>
+    </nav>
+    
+</body>
+</html>

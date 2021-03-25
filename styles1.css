@@ -1,0 +1,143 @@
+﻿/*Tipos de selectores basicos*/
+/*Selector de etiqueta*/
+/*Usados para dar estilos generales como cuando reseteas los estilos del navegador no para estilos personlizados*/
+
+/*p
+{
+    color: red;
+}
+
+h1
+{
+    color: blue;
+}*/
+
+/*Selectores de clase*/
+/*Estos si se usan para dar estilos personalizados ya que son especificos a una determinada etiqueta y clase previamente determinada en html y la clase puede ser la misma pero pertenecer a distintas 
+    etiquetas y asi diferenciarse
+*/
+
+/*h1.title
+{
+    color: green;
+}
+
+p.text
+{
+    color: blueviolet;
+}*/
+
+/*Selectores de ID*/
+/*Para nada recomendados en CSS ya que las id son unicas sin importar el tipo de etiqueta al que identifiquen*/
+
+/*#title
+{
+    color: aqua;
+}
+
+#text
+{
+    color: burlywood;
+}*/
+
+/*Selector universal*/
+/*Uso exclusivo para resetear estilos del navegador ya que aplica a todo el html*/
+/*Advertencia, este selector pesa menos que los especificos de arriba asi que para que aplique hay que comentarlos*/
+
+/*
+    * (si este es el selector)
+    {
+       color: red;
+    }
+
+*/
+
+/*Selectores de atributo*/
+/*Hay varios tipos*/
+
+/*Selecciona los elementos que tienen un determinado atributo*/
+[href]
+{
+    color: green;
+}
+
+/*Selecciona los elementos que tienen un determinado atributo y valor del mismo*/
+[href="#"] 
+{
+    color: red;
+}
+
+/*Selecciona los elementos que tienen un determinado atributo y al menos una vez un determinado valor*/
+[class~="verde"] 
+{
+    color: aqua;
+}
+
+/*Selecciona los elementos que tienen un determinado atributo y exactamente ese valor O QUE TENGA ESE VALOR PRIMERO Y ADEMAS LUEGO DE ESE VALOR UN GUION (-)*/
+[class|="rojo"]
+{
+    color: blueviolet;
+}
+
+/*Selecciona los elementos que tienen un determinado atributo y empiezan por ese valor*/
+[class^="rojo"] 
+{
+    color: brown;
+}
+
+/*Selecciona los elementos que tienen un determinado atributo y terminan con ese valor*/
+[class$="rojo"] 
+{
+    color: beige;
+}
+
+/*Selecciona los elementos que tienen un determinado atributo y contengan ese valor*/
+[class*="rojo"] 
+{
+    color: gold;
+}
+
+/*Selectores combinadores*/
+/*Siempre se baja en la jerarquia nunca se sube, esto funciona declarando primero un padre o hermano y luego buscando los hijos o hermanos siempre hacia abajo en el html nunca hacia arriba*/
+
+/*Selector de hermano adyacente*/
+h1 + h2  /*selecciona al hermano que este justo debajo de h1*/
+{
+    color: red;
+}
+
+h2 + h2 /*selecciona al hermano que este justo debajo de h2*/
+{
+    color: green;
+}
+
+/*Selector de hermano general*/
+
+h1 ~ h3 /*elije a h1 como padre y luego busca hacia abajo todos los h3 hijos y les aplica el estilo*/
+{
+    color: brown;
+}
+
+h3 ~ h1 /*no pasa nada porque debajo del h3 no hay h1 y no se puede ir para arriba*/
+{
+    color: purple;
+}
+
+/*Selectores descendentes*/
+
+div span /*Selecciona a todos los span hijos de un div*/
+{
+    color: red;
+}
+
+/*Selector de hijo directo*/
+
+p > span /*Selecciona a todos los span hijos de un p solo si su relacion es directa, es decir que el span no esta dentro de otra etiqueta que a su vez esta dentro de p*/
+{
+    color: blue;
+}
+
+a.link
+{
+    color: red;
+}

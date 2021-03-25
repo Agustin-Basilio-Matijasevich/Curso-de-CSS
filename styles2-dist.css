@@ -1,0 +1,55 @@
+/*Herencia*/
+
+p
+{
+    color: red;
+}
+
+a
+{
+    color: inherit; /*Esto hace heredar el color del elemento padre es decir que todos los a que esten dentro de un p van a heredar el color de el p que los contiene, caso contrario no hereda nada
+        y podemos declarar un color predeterminado o dejar el predeterminado del navegador.*/
+}
+
+/*Cascada y especificidad estan directamete relacionadas, los valores de especificidad son:
+
+    Etiqueta : 1
+    clases y pseudoclases : 10
+    id : 100
+    estilos en linea : 1000
+    !Important : mas que cualquiera
+
+    Jerarquia:
+    1: !important
+    2: especificidad
+    3: cascada
+*/
+
+/*Si el conficto no se resuelve por especificidad entra la cascada ya que no pueden estar escritas las dos instrucciones en el mismo lugar*/
+
+#parrafo
+{
+    color: blueviolet; /*Este selector llama a una id asi que es mas especifico que el selector p y que el selector .parrafo y por tanto gana, valor 100*/
+}
+
+.parrafo
+{
+    color: red; /*Este selector llama a una clase asi que es mas especifico que el selector p y por tanto gana, valor 10*/
+}
+
+p
+{
+    color: green; /*Gana este color porque esta debajo del red de arriba resolucion por cascada, el p de arriba y este valen 1*/
+}
+
+p
+{
+    color: yellow !important; /*El !important le gana a todo le chupa un huevo todo si pones important este estilo es el que va y si pones dos !important al mismo selector actua la cascada*/
+}
+
+.parrafo-2
+{
+    color: yellowgreen !important; /*aca como este selector es mas especifico que el anterior deberia ganar pero no lo hace ya que le afecta el !important anterior pero 
+        agregandole !important tambien a este lo pongo al mismo nivel de base y como es mas especifico gana, si fuera el mismo selector p ganaria igual por ser cascada pero modificaria todos los p
+    */
+}
